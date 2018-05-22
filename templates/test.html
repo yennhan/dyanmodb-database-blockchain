@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+</head>
+<body>
+<form action = "{{ url_for('owner_port.owner_list') }}" method = "POST" >
+    <div class="form-group ">
+        <label for="DELETE_ID" >Owner ID </label>
+        <input type="text" class="form-control " name=owner_a id="DELETE_ID"  placeholder="Enter owner ID">
+    </div>
+    <button class=" btn-danger" data-dismiss="modal" type="submit">DELETE</button>
+</form>
+
+
+</body>
+</html>

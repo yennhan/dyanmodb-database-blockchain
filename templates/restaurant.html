@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Animate.css -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Normalize -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link href="{{url_for ('static',filename='company_claim.css')}}" rel="stylesheet">
+</head>
+
+
+<div id="Navigation">
+  <div class="Main-navigation">
+    <div class="Main-logo">
+       <i class="fa fa-home"></i>
+    </div>
+
+    <div class="Navigation-items">
+      <ul class="Navigation-list">
+
+
+        <li class="Navigation-list-item active">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-home"></i>
+          </span>
+         <a  href="{{ url_for('dashboard') }}" >Dashboard </a>
+        </li>
+        </li>
+          <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-address-book"></i>
+          </span>
+          <span class="Navigation-title">Participants</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+             <a href="{{ url_for('owner_port.owner_homepage') }}" >Owners </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <a href="{{ url_for('banks.bank_homepage') }}">Banks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+                  <a href="{{ url_for('law.law_homepage') }}" >Lawyers </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-cubes"></i>
+              </span>
+                  <a href="{{ url_for('company.company_homepage') }}" >Company </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-dollar"></i>
+          </span>
+          <span class="Navigation-title">Transactions</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+              <a href="{{ url_for('transaction.view_transaction') }}" >All Transactions </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <span class="Navigation-title">Proposals</span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Assets Book</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('land_title.land_title') }}" >Land Title </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <span class="Navigation-title">Sales and Purchase </span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 2</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant.rest_homepage') }}" >Restaurant</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('claim.company_claim') }}" >Company Claim</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+                  <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 3</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant2.home_page') }}" >Restaurant2</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('stocks.stock_homepage') }}" >Stocks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier1.supplier_homepage') }}" >Supplier 1 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier2.supplier_homepage') }}" >Supplier 2 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier3.supplier_homepage') }}" >Supplier 3 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-clock-o"></i>
+          </span>
+          <span class="Navigation-title">
+              <span class="Navigation-title"></span>
+              <a  href="{{ url_for('index') }}" >Log Out</a>
+          </span>
+        </li>
+
+      </ul>
+      <span class="divider"></span>
+
+      <span class="divider"></span>
+    </div>
+  </div>
+</div>
+<body>
+<section>
+  <h1 style="color:white "><u>Restaurant Jibby&Co </u></h1>
+  <input  class="input-field " style="color:white" type="text" id="searchInput1" onkeyup="searchTable()" placeholder="Search ID...">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Receipt ID</th>
+          <th onclick="sortTable(1)">Total Price </th>
+            <th onclick="sortTable(3)">Claim Type</th>
+              <th onclick="sortTable(4)">Receipt</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table id="myTable1" cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for item in restaurant_data %}
+        <tr>
+           <td>{{ item['receiptID'] }}</td>
+           <td >{{ item['total_price'] }}</td>
+           <td >{{ item['companyID'] | replace("resource:org.acme.model.company#","")}}</td>
+            <td><button type="button"class="butn butn-outline-teal" data-toggle="modal" data-target="#{{ item['receiptID'] }}" > View Receipt </button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- Modal -->
+{% for item in restaurant_data %}
+<div class="modal fade" id="{{ item['receiptID'] }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="111">Hello </h4>
+      </div>
+      <div class="modal-body">
+    <object width="580" height="600" data="{{ pdf_reader }}{{ item['receiptID'] }}.pdf"></object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ {% endfor %}
+
+<div class="container-tiles">
+  <ul class="tiles">
+    <li class="tile">
+      <i class="fa fa-institution fa-3x" style="color:white" aria-hidden="true"></i>
+        <p class="title" ><h2 style="color:white">Add Orders</h2></p>
+      <button type="button"class="butn butn-outline-teal" data-toggle="modal" data-target="#add_company" > Add </button>
+    </li>
+    <li class="tile">
+      <i class="fa fa-close fa-3x" style="color:white" aria-hidden="true"></i>
+         <p class="title"><h2 style="color:white">Delete Orders</h2></p>
+
+       <div class="d-inline">
+         <button type="button"  class="butn butn-outline-teal " data-toggle="modal" data-target="#delete_company" > Delete</button></div>
+    </li>
+    <li class="tile">
+      <i class="fa fa-edit fa-3x" style="color:white" aria-hidden="true"></i>
+      <p class="title"><h2 style="color:white">Update Details</h2></p>
+      <div class="d-inline">
+      <button type="button" class="butn butn-outline-teal " href= "" data-dismiss="modal"> Update</button></div>
+    </li>
+  </ul>
+</div>
+<div class="modal fade" id="delete_company" role="dialog">
+    <div class="modal-dialog modal-lg ">
+         <div class="modal-content">
+         <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel1">Delete Company Claim From Participating in the Blockchain</h4>
+      </div>
+         <div class="modal-body form-row">
+    <form action = "{{ url_for('company.delete_company') }}" method = "POST" class="" id="delete-form">
+        <div class="form-group ">
+            <label for="DELETE_ID" >Bank ID </label>
+        <input type="text" class="form-control" name=delete_id id="DELETE_ID" >
+
+        </div>
+      <div class="row">
+          <button class="btn-danger pull-right" type="button" data-dismiss="modal" class="close">Back</button>
+        <button class="btn-primary pull-right" type='submit'>Submit</button>
+      </div>
+    </form>
+         </div>
+         </div>
+    </div>
+</div>
+<div class="modal fade" id="add_company" role="dialog">
+    <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+         <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel2">Add Receipt and Claim</h4>
+      </div>
+        <div class="modal-body form-row">
+    <form action = "{{ url_for('restaurant.the_one_claiming') }}" method = "POST" class="" id="add_company_form">
+         <div class="form-group">
+            <label for="chick" class="col-2 col-form-label">Chick Breakie (28)</label>
+          <input id="chick"  class="form-control" name="chick_breakie" type="number" class="validate">
+      </div>
+        <div class="form-group">
+            <label for="big_breakfast" class="col-2 col-form-label">Jibby Big Breakfast (31)</label>
+          <input id="big_breakfast"  class="form-control" name="big_breakfast" type="number" class="validate">
+      </div>
+        <div class="form-group">
+            <label for="casa_egg" class="col-2 col-form-label">Casablanca Eggs (28)</label>
+          <input id="casa_egg"  class="form-control" name="casablanca_egg" type="number" class="validate">
+      </div>
+         <div class="form-group">
+            <label for="drips" class="col-2 col-form-label">Jibby Trio Drips (22)</label>
+          <input id="drips"  class="form-control" name="trio_drips" type="number" class="validate">
+      </div>
+        <div class="form-group">
+            <label for="para" class="col-2 col-form-label">Paradise Breakie (25)</label>
+          <input id="para"  class="form-control" name="paradise_breakie" type="number" class="validate">
+      </div>
+         <div class="form-group">
+            <label for="salad_calamari" class="col-2 col-form-label">Crispy Calamari Salad (22)</label>
+          <input id="salad_calamari"  class="form-control" name="calamari_salad" type="number" class="validate">
+      </div>
+         <div class="form-group">
+            <label for="aus_rib_eye" class="col-2 col-form-label">300g Chilled Australian Rib Eye Steak (72)</label>
+          <input id="aus_rib_eye"  class="form-control" name="rib_eye_steak" type="number" class="validate">
+      </div>
+         <div class="form-group">
+            <label for="bbq_beef" class="col-2 col-form-label">Sticky BBQ Beef Ribs (65)</label>
+          <input id="bbq_beef"  class="form-control" name="sticky_bbq_beef_ribs" type="number" class="validate">
+      </div>
+        <div class="form-group">
+            <label for="salmon" class="col-2 col-form-label">Salmon Russian  (23)</label>
+          <input id="salmon"  class="form-control" name="salmon_russian" type="number" class="validate">
+      </div>
+         <label >Claiming?</label>
+        <div class="form-group">
+           <button class="btn-primary center " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Yes</button>
+           <button class="btn-danger center" type='submit'>No</button>
+       </div>
+        <div class="collapse" id="collapseExample">
+  <div class="card card-body">
+      <div class="form-group ">
+            <label for="amount" >Claim ID</label>
+        <input type="text" class="form-control" name=claim_id id="amount" >
+        </div>
+  </div>
+</div>
+      <div class="row ">
+          <button class=" btn-danger pull-right"data-dismiss="modal" type="">Back</button>
+        <button class="btn-primary pull-right" type='submit'>Submit</button>
+      </div>
+    </form>
+        </div>
+         </div>
+    </div>
+</div>
+<script src="static/js/company_claim.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

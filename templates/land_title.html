@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Animate.css -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Normalize -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link href="{{url_for ('static',filename='land_title.css')}}" rel="stylesheet">
+</head>
+
+<div id="Navigation">
+  <div class="Main-navigation">
+    <div class="Main-logo">
+       <i class="fa fa-home"></i>
+    </div>
+
+    <div class="Navigation-items">
+      <ul class="Navigation-list">
+
+
+        <li class="Navigation-list-item active">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-home"></i>
+          </span>
+         <a  href="{{ url_for('dashboard') }}" >Dashboard </a>
+        </li>
+        </li>
+          <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-address-book"></i>
+          </span>
+          <span class="Navigation-title">Participants</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+             <a href="{{ url_for('owner_port.owner_homepage') }}" >Owners </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <a href="{{ url_for('banks.bank_homepage') }}">Banks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+                  <a href="{{ url_for('law.law_homepage') }}" >Lawyers </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-cubes"></i>
+              </span>
+                  <a href="{{ url_for('company.company_homepage') }}" >Company </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-dollar"></i>
+          </span>
+          <span class="Navigation-title">Transactions</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+              <a href="{{ url_for('transaction.view_transaction') }}" >All Transactions </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <span class="Navigation-title">Proposals</span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Assets Book</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('land_title.land_title') }}" >Land Title </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <span class="Navigation-title">Sales and Purchase </span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 2</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant.rest_homepage') }}" >Restaurant</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('claim.company_claim') }}" >Company Claim</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+                  <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 3</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant2.home_page') }}" >Restaurant2</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('stocks.stock_homepage') }}" >Stocks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier1.supplier_homepage') }}" >Supplier 1 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier2.supplier_homepage') }}" >Supplier 2 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier3.supplier_homepage') }}" >Supplier 3 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-clock-o"></i>
+          </span>
+          <span class="Navigation-title">
+              <span class="Navigation-title"></span>
+              <a  href="{{ url_for('index') }}" >Log Out</a>
+          </span>
+        </li>
+
+      </ul>
+      <span class="divider"></span>
+
+      <span class="divider"></span>
+    </div>
+  </div>
+</div>
+<body>
+<section>
+  <h1 style="color:white "><u>Land Titles</u></h1>
+  <input  class="input-field "  type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search ID...">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Land ID<br/>(Hak Milik)</th>
+          <th onclick="sortTable(1)">Owner ID</th>
+             <th onclick="sortTable(2)">No Lot</th>
+          <th onclick="sortTable(3)">Size<br/>(Meter Persegi)</th>
+            <th onclick="sortTable(4)" >No Lembaran Piawai</th>
+           <th onclick="sortTable(5)">Negeri</th>
+          <th onclick="sortTable(6)"class="td-1">Daerah</th>
+          <th onclick="sortTable(7)" class="td-3">Land Type</th>
+            <th onclick="sortTable(8)" class="td-4">Location Type</th>
+          <th onclick="sortTable(9)">Daftaran Pada</th>
+
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table id="myTable" cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for land in data %}
+        <tr>
+           <td >{{ land['hakmilik_id'] }}</td>
+             <td>{{ land['ownerid'] | replace("resource:org.acme.model.owner","") }}</td>
+             <td >{{ land['no_lot'] }}</td>
+          <td >{{ land['luas_lot'] }}</td>
+           <td >{{ land['no_lembaran_piawai'] }}</td>
+           <td >{{ land['Negeri'] }}</td>
+          <td class="td-1">{{ land['Daerah']}}</td>
+            <td class="td-3">{{ land['kategori_tanah']}}</td>
+          <td class="td-4">{{ land['location_type'] }}</td>
+            <td >{{ land['daftaran_pada'] | replace("T"," ")}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+<div class="container-tiles">
+  <ul class="tiles">
+    <li class="tile">
+      <i class="fa fa-map-o fa-4x" style="color:white" aria-hidden="true"></i>
+        <p class="title" ><h2 style="color:white">Add Lands</h2></p>
+        <h4 style="color:white">{{ exist }}</h4>
+      <button type="button"class="butn butn-outline-teal" data-toggle="modal" data-target="#add_land" > Add </button>
+
+    </li>
+    <li class="tile">
+      <i class="fa fa-minus-circle fa-4x" style="color:white" aria-hidden="true"></i>
+         <p class="title"><h2 style="color:white">Delete Titles</h2></p>
+
+       <div class="d-inline">
+         <button type="button"  class="butn butn-outline-teal " data-toggle="modal" data-target="#delete_owner" > Delete</button></div>
+    </li>
+    <li class="tile">
+      <i class="fa fa-paint-brush fa-4x" style="color:white" aria-hidden="true"></i>
+      <p class="title"><h2 style="color:white">Update Details</h2></p>
+
+      <div class="d-inline">
+
+      <button type="button" class="butn butn-outline-teal " href= "" data-dismiss="modal"> Update</button></div>
+    </li>
+  </ul>
+</div>
+<div class="modal fade" id="add_land" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="form-row">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title ">Adding A Land Title to the BLOCKCHAIN</h2>
+        </div>
+        </div>
+        <div class="modal-body form-row">
+            <form action = "{{ url_for('land_title.add_land') }}" method = "POST" id="add_land_form">
+                <div class="form-group ">
+                    <label for="CURRENT_OWNER_ID" class="col-2 col-form-label">Owner ID </label>
+                    <input type="text" class="form-control "name="owner_id" id="CURRENT_OWNER_ID"  placeholder="e.g:owner01">
+                </div>
+                <div class="form-group ">
+                    <label for="land_ID"class="col-2 col-form-label" >Land ID </label>
+                    <input type="text" class="form-control "name="land_id" id="land_ID"  placeholder="e.g:land01">
+                </div>
+                <div class="form-group ">
+                  <label for="lot_no" class="col-2 col-form-label" >Lot No </label>
+                  <input type="text" class="form-control " name="lot_no" id="lot_no"  placeholder="LOT_69C">
+                </div>
+                <div class="form-group ">
+                  <label for="size_meter"  class="col-2 col-form-label">Size(Meter Persegi) </label>
+                  <input type="text" class="form-control " name="size_meter" id="size_meter"  placeholder="size(psqft)">
+                </div>
+                <div class="form-group ">
+                    <label for="lembaran_piawai" class="col-2 col-form-label">NO LEMBARAN PIAWAI</label>
+                    <input type="text" class="form-control " name="lembaran_piawai" id="lembaran_piawai"  placeholder="110-C">
+                </div>
+                <div class="form-group ">
+                    <label>Negeri</label>
+                    <select  class="form-control form-control-sm" name="negeri">
+                        <option value="wilayah">Wilayah.P, Persekutuan</option>
+                        <option value="penang">PENANG</option>
+                        <option value="selangor">SELANGOR</option>
+                        <option value="perak">Perak</option>
+                        <option value="johor">Johor</option>
+                        <option value="sabah">Sabah</option>
+                        <option value="sarawak">Sarawak</option>
+                        <option value="melaka">Melaka</option>
+                        <option value="kedah">Kedah</option>
+                        <option value="Terengganu">Terengganu</option>
+                        <option value="pahang">Pahang</option>
+                        <option value="kelantan">Kelantan</option>
+                         <option value="n9">Negeri Sembilan</option>
+                         <option value="perlis">Perlis</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="Daerah" class="col-2 col-form-label">Daerah</label>
+                    <input type="number" class="form-control" name="daerah" id="Daerah" placeholder="e.gPetaling">
+                </div>
+                <div class="form-group ">
+                    <label>Location Type</label>
+                    <select  class="form-control form-control-sm" name="location">
+                        <option value="bandar">Bandar</option>
+                        <option value="pekan">Pekan</option>
+                         <option value="mukim"> Mukim</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <label>Kategori Tanah</label>
+                    <select  class="form-control form-control-sm" name="tanah">
+                        <option value="tiada">Tiada</option>
+                        <option value="bangunan">Bangunan</option>
+                        <option value="Pertanian">Pertanian</option>
+                         <option value="tanah"> Tanah</option>
+                    </select>
+                </div>
+                 <div class="row ">
+          <button class=" btn-danger pull-right"data-dismiss="modal" type="">Back</button>
+        <button class="btn-primary pull-right" type='submit'>Submit</button>
+      </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="modal fade" id="delete_owner" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="form-row">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title ">DELETING Land Title on the BLOCKCHAIN</h2>
+        </div>
+        </div>
+        <div class="modal-body form-row">
+            <form action = "" method = "POST" >
+                <div class="form-group ">
+                    <label for="DELETE_land_ID" >Land ID </label>
+                    <input type="text" class="form-control " id="DELETE_land_ID"  placeholder="Enter land ID">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class=" btn-danger" data-dismiss="modal">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="static/js/land_title.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

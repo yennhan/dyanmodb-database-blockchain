@@ -1,0 +1,234 @@
+body{
+  background:  linear-gradient(to bottom right, #33799d, #e8ebb4);;
+}
+.form-container {
+
+   width:60vw;
+  height:auto;
+  margin-left: 420px;
+}
+.card-title {
+  text-align:center;
+}
+/* ====== Navigation ====== */
+
+#Navigation {
+  background: #252627;
+  position: fixed;
+  display: block;
+  width: 250px;
+  height: 100%;
+  color: #999fa2;
+  font-size: 14px;
+  z-index: 200;
+}
+
+.Main-navigation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.Main-logo {
+  line-height: 100px;
+  width: 100%;
+  height: 100px;
+  background: #272e35;
+  border-bottom: 1px solid #242a31;
+}
+
+.Main-logo img {
+  position: relative;
+  width: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.logotype {
+  color: #9aa4a7;
+  margin-left: 30px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+}
+
+.Navigation-list li {
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.Navigation-list-item {}
+
+.Navigation-list-item:hover {
+  background: #242a31;
+}
+
+.Navigation-list-item:hover .Navigation-title {
+  color: #fff;
+}
+
+.Navigation-items {
+  background: #272e35;
+  display: block;
+  height: 100%;
+  top: 0;
+}
+
+li.Navigation-list-item.active {
+  background: #242a31;
+}
+
+.Navigation-icon {
+  margin-left: 20px;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.Navigation-title {}
+
+.Navigation-short {
+  padding: 30px;
+  font-size: 11px;
+}
+
+.divider {
+  display: block;
+  border-bottom: 1px solid #242a31;
+}
+
+
+/* ====== Slideout navigation ====== */
+
+.Secondary-nav-list {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 250px;
+  height: 100%;
+  padding-top: 100px;
+  background: #242a31;
+  color: #fff;
+  z-index: -1;
+  transition: all .2s ease-in-out;
+  overflow:hidden;
+}
+
+.Navigation-list-item:hover > .Secondary-nav-list {
+  left: 250px;
+}
+
+.Secondary-nav-list-item {
+  position: relative;
+}
+
+.Sub-nav-arrow {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  right: -20px;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+}
+
+.Secondary-nav-list-item:hover > .Sub-nav-arrow {
+  right: -7.5px;
+  opacity: 1;
+}
+/* ====== Pin board ====== */
+#pin-board {
+  width:100%;
+  height: 100%;
+  display: block;
+}
+.pins {
+  width: 100%;
+  height: auto;
+}
+.pin {
+  width: 400px;
+  float:left;
+  display:block;
+  padding:10px;
+  height: auto;
+}
+.pin-inner {
+  height: 100%;
+  overflow:hidden;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+}
+.pin-thumbnail {
+  position:relative;
+  width: 100%;
+  margin: 0;
+  padding:0;
+}
+.pin:hover .pin-hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.pin-thumbnail img {
+  max-width: 100%;
+}
+.pin-hover {
+  opacity: 0;
+  visibility:0;
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background: rgba(255,255,255, 0.7);
+  text-align:center;
+  transition: all ease-in-out 0.2s;
+}
+.pin-hover i {
+  position: relative;
+  color: #fff;
+  top: 50%;
+  transform: translate-Y(-50%);
+  font-size:1em;
+}
+.pin-info {
+  padding:20px;
+}
+.pin-description {
+  font-size: 11px;
+  margin-top: 20px;
+  color:#9c9c9c;
+}
+.pin-bar {
+  width: 100%;
+  height: 25px;
+  position: relative;
+  margin: 0;
+}
+.pin-bar span {
+  line-height: 25px;
+  margin-left: 20px;
+  font-size: 12px;
+  color:#9c9c9c;
+}
+.pin-edit {
+  height: 100%;
+  float: right;
+  margin-right: 20px;
+}
+.pin-edit button {
+  border:0;
+  border-radius: 50%;
+  background: #252627;
+  color:#fff;
+  width: 25px;
+  height: 25px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.pin-edit button:hover {
+  background: #242a31;

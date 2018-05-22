@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Animate.css -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Normalize -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link href="{{url_for ('static',filename='company_claim.css')}}" rel="stylesheet">
+</head>
+
+
+<div id="Navigation">
+  <div class="Main-navigation">
+    <div class="Main-logo">
+       <i class="fa fa-home"></i>
+    </div>
+
+    <div class="Navigation-items">
+      <ul class="Navigation-list">
+
+
+        <li class="Navigation-list-item active">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-home"></i>
+          </span>
+         <a  href="{{ url_for('dashboard') }}" >Dashboard </a>
+        </li>
+        </li>
+          <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-address-book"></i>
+          </span>
+          <span class="Navigation-title">Participants</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+             <a href="{{ url_for('owner_port.owner_homepage') }}" >Owners </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <a href="{{ url_for('banks.bank_homepage') }}">Banks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+                  <a href="{{ url_for('law.law_homepage') }}" >Lawyers </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-cubes"></i>
+              </span>
+                  <a href="{{ url_for('company.company_homepage') }}" >Company </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-dollar"></i>
+          </span>
+          <span class="Navigation-title">Transactions</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+              <a href="{{ url_for('transaction.view_transaction') }}" >All Transactions </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <span class="Navigation-title">Proposals</span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Assets Book</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('land_title.land_title') }}" >Land Title </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <span class="Navigation-title">Sales and Purchase </span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 2</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant.rest_homepage') }}" >Restaurant</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('claim.company_claim') }}" >Company Claim</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+                  <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 3</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant2.home_page') }}" >Restaurant2</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('stocks.stock_homepage') }}" >Stocks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier1.supplier_homepage') }}" >Supplier 1 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier2.supplier_homepage') }}" >Supplier 2 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier3.supplier_homepage') }}" >Supplier 3 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-clock-o"></i>
+          </span>
+          <span class="Navigation-title">
+              <span class="Navigation-title"></span>
+              <a  href="{{ url_for('index') }}" >Log Out</a>
+          </span>
+        </li>
+
+      </ul>
+      <span class="divider"></span>
+
+      <span class="divider"></span>
+    </div>
+  </div>
+</div>
+
+<body>
+
+<section>
+  <h1 style="color:white "><u>Exxon Mobile </u></h1>
+  <input  class="input-field " style="color:white" type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search ID...">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Employee Claim ID</th>
+          <th onclick="sortTable(1)">Company ID </th>
+          <th onclick="sortTable(2)">Owner ID </th>
+            <th onclick="sortTable(3)">Claim Limit</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table id="myTable" cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for company in data %}
+        <tr>
+           <td>{{ company['employee_claimID'] }}</td>
+           <td >{{ company['companyID'] | replace("resource:org.acme.model.company#","")}}</td>
+           <td >{{ company['ownerID'] | replace("resource:org.acme.model.owner#","")}}</td>
+            <td >{{ company['claim_limit'] }}</td>
+
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+
+  <h1 style="color:white "><u>Transactions </u></h1>
+  <input  class="input-field " style="color:white" type="text" id="searchInput1" onkeyup="searchTable()" placeholder="Search ID...">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th width="50%" onclick="sortTable(0)">TransactionID</th>
+          <th onclick="sortTable(1)">Claim ID </th>
+          <th onclick="sortTable(2)">Receipt ID </th>
+            <th onclick="sortTable(3)">TimeStamp</th>
+             <th onclick="sortTable(4)"></th>
+
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table id="myTable2" cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for item in transactions %}
+        <tr>
+           <td width="50%">{{ item['transactionId'] }}</td>
+           <td >{{ item['claimID'] | replace("resource:org.acme.model.company_claim#","")}}</td>
+           <td >{{ item['receiptID'] | replace("resource:org.acme.model.receipt#","")}}</td>
+            <td >{{ item['timestamp'] }}</td>
+            <td><button type="button"class="butn butn-outline-teal" data-toggle="modal" data-target="#{{ item['receiptID'] | replace('resource:org.acme.model.receipt#','')}}" > View Receipt </button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- Modal -->
+{% for item in transactions %}
+<div class="modal fade" id="{{ item['receiptID'] | replace('resource:org.acme.model.receipt#','')}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="111">{{ pdf_reader }}{{ item['receiptID']| replace('resource:org.acme.model.receipt#','') }}.pdf </h4>
+      </div>
+      <div class="modal-body">
+    <object width="580" height="600" data="{{ pdf_reader }}{{ item['receiptID']| replace('resource:org.acme.model.receipt#','') }}.pdf"></object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ {% endfor %}
+
+<div class="container-tiles">
+  <ul class="tiles">
+    <li class="tile">
+      <i class="fa fa-institution fa-3x" style="color:white" aria-hidden="true"></i>
+        <p class="title" ><h2 style="color:white">Add Employee Claim Limit</h2></p>
+      <button type="button"class="butn butn-outline-teal" data-toggle="modal" data-target="#add_company" > Add </button>
+
+    </li>
+    <li class="tile">
+      <i class="fa fa-close fa-3x" style="color:white" aria-hidden="true"></i>
+         <p class="title"><h2 style="color:white">Delete Employee Participation</h2></p>
+
+       <div class="d-inline">
+         <button type="button"  class="butn butn-outline-teal " data-toggle="modal" data-target="#delete_company" > Delete</button></div>
+    </li>
+    <li class="tile">
+      <i class="fa fa-edit fa-3x" style="color:white" aria-hidden="true"></i>
+      <p class="title"><h2 style="color:white">Update Details</h2></p>
+      <div class="d-inline">
+      <button type="button" class="butn butn-outline-teal " href= "" data-dismiss="modal"> Update</button></div>
+    </li>
+  </ul>
+</div>
+<div class="modal fade" id="delete_company" role="dialog">
+    <div class="modal-dialog modal-lg ">
+         <div class="modal-content">
+         <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel1">Delete Employee Claim</h4>
+      </div>
+         <div class="modal-body form-row">
+    <form action = "{{ url_for('company.delete_company') }}" method = "POST" class="" id="delete-form">
+        <div class="form-group ">
+            <label for="DELETE_ID" >Bank ID </label>
+        <input type="text" class="form-control" name=delete_id id="DELETE_ID" >
+
+        </div>
+      <div class="row">
+          <button class="btn-danger pull-right" type="button" data-dismiss="modal" class="close">Back</button>
+        <button class="btn-primary pull-right" type='submit'>Submit</button>
+      </div>
+    </form>
+         </div>
+         </div>
+    </div>
+</div>
+<div class="modal fade" id="add_company" role="dialog">
+    <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+         <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel2">Adding Claim_Limit To the Blockchain</h4>
+      </div>
+        <div class="modal-body form-row">
+    <form action = "{{ url_for('claim.register_claim_company') }}" method = "POST" class="" id="add_company_form">
+         <div class="form-group ">
+    <label for="employee_claim_ID"class="col-2 col-form-label" >Employee Claim ID </label>
+        <input type="text" class="form-control" name="employee_claim_id" id="employee_claim_ID"  >
+        </div>
+         <div class="form-group">
+         <label for="claim_person_id" class="col-2 col-form-label">Claim Person ID </label>
+            <input type="text"  name="claim_person_id" class="form-control" id="claim_person_id">
+         </div>
+      <div class="form-group">
+            <label for="claim_limit" class="col-2 col-form-label">Claim_Limit</label>
+          <input id="claim_limit"  class="form-control" name="claim_limit" type="number" class="validate">
+      </div>
+      <div class="row ">
+          <button class=" btn-danger pull-right"data-dismiss="modal" type="">Back</button>
+        <button class="btn-primary pull-right" type='submit'>Submit</button>
+      </div>
+    </form>
+        </div>
+         </div>
+    </div>
+</div>
+
+<script src="static/js/company_claim.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

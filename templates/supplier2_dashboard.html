@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Compiled and minified CSS
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+-->
+    <!-- Animate.css -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Normalize -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link href="{{url_for ('static',filename='supplier.css')}}" rel="stylesheet">
+</head>
+
+<div id="Navigation">
+  <div class="Main-navigation">
+    <div class="Main-logo">
+       <i class="fa fa-home"></i>
+    </div>
+
+    <div class="Navigation-items">
+      <ul class="Navigation-list">
+
+
+        <li class="Navigation-list-item active">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-home"></i>
+          </span>
+         <a  href="{{ url_for('dashboard') }}" >Dashboard </a>
+        </li>
+        </li>
+          <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-address-book"></i>
+          </span>
+          <span class="Navigation-title">Participants</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+             <a href="{{ url_for('owner_port.owner_homepage') }}" >Owners </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <a href="{{ url_for('banks.bank_homepage') }}">Banks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+                  <a href="{{ url_for('law.law_homepage') }}" >Lawyers </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-cubes"></i>
+              </span>
+                  <a href="{{ url_for('company.company_homepage') }}" >Company </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-dollar"></i>
+          </span>
+          <span class="Navigation-title">Transactions</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+              <a href="{{ url_for('transaction.view_transaction') }}" >All Transactions </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <span class="Navigation-title">Proposals</span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Assets Book</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('land_title.land_title') }}" >Land Title </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <span class="Navigation-title">Sales and Purchase </span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 2</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant.rest_homepage') }}" >Restaurant</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('claim.company_claim') }}" >Company Claim</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+                  <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 3</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant2.home_page') }}" >Restaurant2</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('stocks.stock_homepage') }}" >Stocks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier1.supplier_homepage') }}" >Supplier 1 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier2.supplier_homepage') }}" >Supplier 2 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier3.supplier_homepage') }}" >Supplier 3 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-clock-o"></i>
+          </span>
+          <span class="Navigation-title">
+              <span class="Navigation-title"></span>
+              <a  href="{{ url_for('index') }}" >Log Out</a>
+          </span>
+        </li>
+
+      </ul>
+      <span class="divider"></span>
+
+      <span class="divider"></span>
+    </div>
+  </div>
+</div>
+
+<body>
+<section>
+  <h1 style="color:white "><u>Request</u></h1>
+  <input  class="input-field " style="color:white" type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search ID...">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+         <th onclick="sortTable(0)">Request ID</th>
+          <th onclick="sortTable(1)">Company ID</th>
+            <th onclick="sortTable(2)">Stock ID</th>
+          <th onclick="sortTable(3)">Request DateTime</th>
+             <th onclick="sortTable(3)">Send Invoice</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table id="myTable" cellpadding="0" cellspacing="0" border="0">
+       <tbody>
+        {% for item in invoice %}
+        <tr>
+           <td>{{ item['requeststockID'] }}</td>
+            <td>{{ item['companyID'] | replace("resource:org.acme.model.company#"," ") }}</td>
+            <td>{{ item['stockID'] | replace("resource:org.acme.model.stock#"," ") }}</td>
+            <td>{{ item['restock_date_time_update']   }}</td>
+              <td>
+            <form action = "{{ url_for('supplier2.issue_invoice2') }}" method = "POST" id="add_invoice">
+                <div class="form-group ">
+                   <select  class="form-control form-control-sm" name="issue_invoice" style="display:none">
+                        <option value="{{ item['stockID'] }}" ></option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                   <select  class="form-control form-control-sm" name="request_stock_id" style="display:none">
+                        <option value="{{ item['requeststockID'] }}" ></option>
+                    </select>
+                </div>
+                 <button class="butn butn-outline-teal" type='submit'>Issue Invoice</button>
+            </form>
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h1 style="color:white "><u>Completion</u></h1>
+  <input  class="input-field " style="color:white" type="text" id="searchInput1" onkeyup="searchTable()" placeholder="Search ID...">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Request ID</th>
+
+          <th onclick="sortTable(1)">Company Name</th>
+          <th onclick="sortTable(2)">Stock ID</th>
+            <th onclick="sortTable(3)">Time Stamp </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table id="myTable1" cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for item in data %}
+        <tr>
+           <td>{{ item['requeststockID'] }}</td>
+            <td>{{ item['companyID']   }}</td>
+           <td >{{ item['stockID'] |replace ("resource:org.acme.model.company#"," ") }}</td>
+           <td >{{ item['restock_date_time_update']  }}</td>
+
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script src="static/js/supplier.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

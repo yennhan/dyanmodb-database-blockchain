@@ -1,0 +1,455 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Animate.css -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Normalize -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+
+          <link href="static/dashboard.css" rel="stylesheet">
+</head>
+
+<div id="Navigation">
+  <div class="Main-navigation">
+    <div class="Main-logo">
+       <i class="fa fa-home"></i>
+    </div>
+
+    <div class="Navigation-items">
+      <ul class="Navigation-list">
+
+
+        <li class="Navigation-list-item active">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-home"></i>
+          </span>
+         <a  href="{{ url_for('dashboard') }}" >Dashboard </a>
+        </li>
+        </li>
+          <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-address-book"></i>
+          </span>
+          <span class="Navigation-title">Participants</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+             <a href="{{ url_for('owner_port.owner_homepage') }}" >Owners </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <a href="{{ url_for('banks.bank_homepage') }}">Banks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+                  <a href="{{ url_for('law.law_homepage') }}" >Lawyers </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-cubes"></i>
+              </span>
+                  <a href="{{ url_for('company.company_homepage') }}" >Company </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+            <i class="fa fa-dollar"></i>
+          </span>
+          <span class="Navigation-title">Transactions</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+              <a href="{{ url_for('transaction.view_transaction') }}" >All Transactions </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-upload"></i>
+              </span>
+              <span class="Navigation-title">Proposals</span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+
+        </li>
+
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Assets Book</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('land_title.land_title') }}" >Land Title </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <span class="Navigation-title">Sales and Purchase </span>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 2</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant.rest_homepage') }}" >Restaurant</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('claim.company_claim') }}" >Company Claim</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+                  <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-address-book-o"></i>
+          </span>
+          <span class="Navigation-title">Case Study 3</span>
+          <ul class="Secondary-nav-list">
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-handshake-o"></i>
+              </span>
+              <a href="{{ url_for('restaurant2.home_page') }}" >Restaurant2</a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+            <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('stocks.stock_homepage') }}" >Stocks </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier1.supplier_homepage') }}" >Supplier 1 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+              <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier2.supplier_homepage') }}" >Supplier 2 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+               <li class="Secondary-nav-list-item">
+              <span class="Navigation-icon accent">
+              <i class="fa fa-user-o"></i>
+              </span>
+              <a href="{{ url_for('supplier3.supplier_homepage') }}" >Supplier 3 </a>
+              <span class="Sub-nav-arrow"></span>
+            </li>
+          </ul>
+        </li>
+        <li class="Navigation-list-item">
+          <span class="Navigation-icon accent">
+           <i class="fa fa-clock-o"></i>
+          </span>
+          <span class="Navigation-title">
+              <span class="Navigation-title"></span>
+              <a  href="{{ url_for('index') }}" >Log Out</a>
+          </span>
+        </li>
+
+      </ul>
+      <span class="divider"></span>
+
+      <span class="divider"></span>
+    </div>
+  </div>
+</div>
+<body>
+<div id="Page">
+  <div class="Main-page background-2">
+<div id="card_timeline">
+      <button type="button" id ="button1" class="butn btn-outline-teal" data-toggle="modal" data-target="#trade_house" >Initiate Transaction</button>
+    <h1><u>Timeline</u></h1>
+    <ul class="progressbar">
+      <div class="d-inline">
+      <li id = "step1" class="{{ exist1 }}">Initiate Purchase</li>
+          <li id = "step2" class="{{ exist2 }}">{{ loan_ap }}<div class="{{ status }}">{{ loan }}</div></li>
+    <li id = "step3"   class="{{ exist3 }}">Generate SNP</li>
+    <li id = "step4"   class="{{ exist4 }}">Sign SNP</li>
+    <li id = "step5"   class="{{ exist5 }}">Completed! </li></div>
+    </ul>
+</div>
+
+      <div class="container-tiles">
+  <ul class="tiles">
+    <li class="tile">
+      <i class="fa fa-calculator fa-4x " aria-hidden="true"></i>
+        <p class="title"><h1>Offer Letter</h1></p>
+      <div class="d-inline float-top">
+          <button  class="butn btn-outline-white " href="" data-toggle="modal" data-target="#offer_letter"style="{{ display_offer_letter }}"> View Offer</button></div>
+
+    </li>
+    <li class="tile">
+      <i class="fa fa-bank fa-4x " aria-hidden="true"></i>
+         <p class="title"><h1>Loan Contract</h1></p>
+
+       <div class="d-inline">
+      <button  class="butn btn-outline-white " href="" data-toggle="modal" data-target="#myModal"style="{{ display_loan }}"> View Docs</button></div>
+    </li>
+    <li class="tile">
+      <i class="fa fa-certificate fa-4x " aria-hidden="true"></i>
+      <p class="title"><h1>SNP</h1></p>
+      <div class="d-inline">
+      <button  class="butn btn-outline-white " href= "" data-toggle="modal"style="{{ display_snp }}" data-target="#show_snp"> View Docs </button></div>
+    </li>
+    <li class="tile">
+      <i class="fa fa-home fa-4x " aria-hidden="true"></i>
+      <p class="title"><h1>Land Title</h1></p>
+      <div class="d-inline">
+      <button  class="butn btn-outline-white " href="" data-toggle="modal" data-target="#land_title" style="{{ display_land_title }}"> View Docs</button></div>
+    </li>
+
+
+  </ul>
+</div>
+  </div>
+</div>
+<div class="modal fade" id="trade_house" role="dialog">
+    <div class="modal-dialog modal-lg ">
+         <div class="modal-content">
+         <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel1">Initiating House Land Title Trade</h4>
+      </div>
+         <div class="modal-body form-row">
+    <form action = "{{ url_for('generate_snp') }}" method = "POST" class="" id="delete-form">
+        <div class="form-group ">
+            <label for="land_title_id" >Land Title ID </label>
+        <input type="text" class="form-control" name=land_title_id id="land_title_id" >
+        </div>
+        <div class="form-group ">
+            <label for="owner1" >owner ID </label>
+        <input type="text" class="form-control" name=owner1 id="owner1" >
+        </div>
+        <div class="form-group ">
+            <label for="newowner" >NewOwner ID</label>
+        <input type="text" class="form-control" name=newowner id="newowner" >
+        </div>
+        <div class="form-group ">
+            <label for="price" >Agreed Price</label>
+        <input type="number" class="form-control" name=agreedprice id="price" >
+        </div>
+           <label >Taking Loan?</label>
+        <div class="form-group">
+           <button class="btn-primary center " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Yes</button>
+           <button class="btn-danger center" type='submit'>No</button>
+       </div>
+        <div class="form-group">
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+         <div class="form-group ">
+                    <label>Preferred Bank</label>
+                    <select  class="form-control form-control-sm" name="banks">
+                        <option value="">...</option>
+                        <option value="bank0">Maybank</option>
+                        <option value="bank1">Bank Rakyat</option>
+                        <option value="bank8">CIMB</option>
+                        <option value="bank10">Citibank</option>
+                        <option value="bank11">Alliance Bank</option>
+                        <option value="bank12">Public Bank</option>
+                        <option value="bank2">UOB</option>
+                        <option value="bank3">RHB</option>
+                        <option value="bank4">HongLeong</option>
+                        <option value="bank5">Standard Chartered</option>
+                        <option value="bank6">HSBC</option>
+                        <option value="bank7">Affin</option>
+                         <option value="Ambank"> Ambank</option>
+                    </select>
+                </div>
+      <div class="form-group ">
+            <label for="amount" >Loan Amount</label>
+        <input type="number" class="form-control" name=loanamount id="amount" >
+        </div>
+      <div class="form-group ">
+            <label>Loan Tenure(Years)</label>
+       <select  class="form-control form-control-sm" name="tenure">
+                        <option value="">...</option>
+                        <option value="10">10</option>
+                        <option value="15"> 15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                         <option value="30"> 30</option>
+                        <option value="35"> 35</option>
+                    </select>
+        </div>
+      <div class="form-group ">
+                    <label>Flexi Loan</label>
+                    <select  class="form-control form-control-sm" name="flexi_loan">
+                        <option value="YES">Yes</option>
+                        <option value="NO"> No</option>
+                    </select></div>
+  </div>
+</div>
+            </div>
+      <div class="row">
+          <button class="btn-danger pull-right" type="button" data-dismiss="modal" class="close">Back</button>
+        <button class="btn-primary pull-right" type='submit'>Submit</button>
+      </div>
+    </form>
+         </div>
+         </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="lawyer_selection1" tabindex="-1" role="dialog" aria-labelledby="lawyer_selection" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="lawyer_selection">Loan Agreement</h4>
+      </div>
+      <div class="modal-body">
+    <object width="580" height="600" data="{{ loan_agreement }}"></object>
+      </div>
+        <form action = "{{ url_for('snp_complete') }}" method = "POST" class="" id="lawyer_name">
+            <div class="form-group ">
+                    <label>Select from our Panel Lawyer for SNP </label>
+                    <select  class="form-control form-control-sm" name="panel_lawyer">
+                        <option value="lawfirm0">Rahayu Partnership</option>
+                        <option value="lawfirm1"> HS LIM & CO</option>
+                         <option value="lawfirm2"> Donovan & Ho</option>
+                         <option value="lawfirm3"> JK Lim Advocates and associates</option>
+                         <option value="lawfirm4"> Miranda ASIA</option>
+                         <option value="lawfirm5"> MahWengKwai & Associates</option>
+                    </select>
+            </div>
+      <div class="row">
+        <button class="btn-primary pull-right" type='submit'>Sign  Agreement</button>
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </form>
+
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">Loan Agreement</h4>
+      </div>
+      <div class="modal-body">
+    <object width="580" height="600" data="{{ loan_agreement }}"></object>
+      </div>
+        <form action = "{{ url_for('snp_complete') }}" method = "POST" class="" id="lawyer_name">
+            <div class="form-group ">
+                    <label>Select from our Panel Lawyer for SNP </label>
+                    <select  class="form-control form-control-sm" name="panel_lawyer">
+                        <option value="lawfirm0">Rahayu Partnership</option>
+                        <option value="lawfirm1"> HS LIM & CO</option>
+                         <option value="lawfirm2"> Donovan & Ho</option>
+                         <option value="lawfirm3"> JK Lim Advocates and associates</option>
+                         <option value="lawfirm4"> Miranda ASIA</option>
+                         <option value="lawfirm5"> MahWengKwai & Associates</option>
+                    </select>
+            </div>
+      <div class="row">
+        <button class="btn-primary pull-right" type='submit'>Sign  Agreement</button>
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </form>
+
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="show_snp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="111">SNP </h4>
+      </div>
+      <div class="modal-body">
+    <object width="580" height="600" data="{{ snp_agreement }}"></object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           <a class="btn btn-default" href="{{ url_for('journey_end')}}">Sign SNP</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="offer_letter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel11" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel11">Offer Letter</h4>
+      </div>
+      <div class="modal-body">
+    <object width="580" height="600" data="{{ offer_letter }}"></object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <a class="btn btn-default" href="{{ url_for('tradehouse')}}">Sign</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="land_title" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="land_title1"> Land Title</h4>
+      </div>
+      <div class="modal-body">
+    <object width="580" height="600" data="{{ land_name }}"></object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://github.com/pipwerks/PDFObject/blob/master/pdfobject.min.js"></script>
+ <script src="static/js/dashboard.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
